@@ -1,9 +1,18 @@
 package basic
 
-fun main(args: Array<String>) {
-    println("Hello World!")
 
-    // Try adding program arguments via Run/Debug configuration.
-    // Learn more about running applications: https://www.jetbrains.com/help/idea/running-applications.html.
-    println("Program arguments: ${args.joinToString()}")
+/*
+* This is the main function . Entry point of the application
+* */
+fun main(args: Array<String>) {
+    var name:String = "Steve"
+
+    var personObj = Person()
+    personObj.display("Ayush")
 }
+class Person{
+fun display(name:String){
+    println(name)
+}
+}
+
