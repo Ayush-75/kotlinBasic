@@ -5,13 +5,15 @@ package basic
 * This is the main function . Entry point of the application
 * */
 fun main(args: Array<String>) {
-    var name:String = "Steve"
-
+//
     var personObj = Person()
-    personObj.display("Ayush")
+    personObj.name = "Ayush"
+    personObj.display()
 }
 class Person{
-fun display(name:String){
+
+    var name:String = ""
+fun display(){
     println(name)
 }
 }
