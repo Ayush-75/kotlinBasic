@@ -2,6 +2,12 @@ package basic
 
 fun main(args: Array<String>) {
 
+    // DataTypes in kotlin: All are Objects
+    /*
+    there are no default in kotlin
+    All variable must be initialized
+     */
+
     var name:String = "Ayush"
 
     var age:Int = 24
