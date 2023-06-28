@@ -27,6 +27,7 @@ fun main(args: Array<String>) {
     println("-----------------------------------------")
 
     // print ranges with for loop
+
     for (i in r1) {
         println(i)
     }
@@ -41,6 +42,7 @@ fun main(args: Array<String>) {
     }
 
     println("-----------------------------------------")
+
     //print ranges with do wile loop
     var j = r1.first
     do {
