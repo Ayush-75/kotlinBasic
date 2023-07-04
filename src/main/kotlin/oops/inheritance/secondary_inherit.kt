@@ -6,7 +6,7 @@ fun main(args: Array<String>) {
 //    dog.color="Black"
 
 }
-
+// Primary and Secondary constructor in inheritance
 open class Animal4 {
 
     var color: String = ""
