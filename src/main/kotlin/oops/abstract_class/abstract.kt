@@ -1,5 +1,7 @@
 package oops.abstract_class
 
+import sealed_class.*
+
 fun main(args: Array<String>) {
 
     var india= Indian()
@@ -8,6 +10,7 @@ fun main(args: Array<String>) {
     india.eat()
     india.gotoSchool()
 }
+
 abstract class Person4{ // you cannot create instance of abstract class
 
     abstract var name:String
