@@ -1,5 +1,12 @@
 package sealed_class
 
+
+/**
+sealed interface Error // has implementations only in same package and module
+
+sealed class IOError(): Error // extended only in same package and module
+open class CustomError(): Error // can be extended wherever it's visible
+* */
 sealed interface Shape1 {
     fun calculateArea(): Double
 }
