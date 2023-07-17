@@ -27,4 +27,6 @@ fun main() {
 
     onDeviceItemClicked(cameraItem) // Output: Camera clicked
     onDeviceItemClicked(lampItem) // Output: Lamp clicked
+
+    println(DeviceItem.Camera.name)
 }
