@@ -23,6 +23,7 @@ fun main() {
     with(person2) {  // you cannot call method
         name = "Ayush"
         age = 22
+
     }
 
     person2.apply {  // Has a right to call these methods like start to run

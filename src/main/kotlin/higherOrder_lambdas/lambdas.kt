@@ -33,8 +33,8 @@ fun main(args: Array<String>) {
 
 
 
-    val take = moreTake()
-    val result = take(5,7)
-    println(result)
+    val take = moreTake().invoke(5,7)
+//    val result = take(5,7)
+    println(take)
 
 }
