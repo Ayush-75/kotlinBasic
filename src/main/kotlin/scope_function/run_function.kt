@@ -11,14 +11,18 @@ fun main(args: Array<String>) {
 
      */
 
-    val person:PersonRun? = null
+    val person:PersonRun? = PersonRun()
 
     val bio = person?.run {
         name = "Ayush"
         age = 24
         println(name)
         println(age)
-        age+5
+        /** If you specify a return type explicitly with return@run,
+        so you don't need to write at return at last,
+         it only works on scope function whose return type is a lambda result,
+         it doesn't work on apply and also scope function*/
+        return@run age+5
         "Hello world" // this will be stored in bio
 
     }

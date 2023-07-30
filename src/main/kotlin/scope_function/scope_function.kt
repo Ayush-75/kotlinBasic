@@ -2,15 +2,9 @@ package scope_function
 
 fun main() {
 
-    var person1: List<Person1>? = listOf<Person1>(
-        Person1("Ayush", "India", 24),
-        Person1("Axetentor", "Usa", 24),
-        Person1("Golu", "China", 24)
-    )
+    var letVariable = Person1("Axe", "Poland", 24).let {currentPerson ->
 
-    var letVariable = Person1("Axe", "Poland", 24).let {
-
-        it.name + it.age
+        currentPerson.name + currentPerson.age
     }
     println("Let : $letVariable")
 
@@ -41,4 +35,4 @@ fun main() {
     println("run : $runVariable")
 }
 
-data class Person1(var name: String, var nationality: String, var age: Int){}
+data class Person1(var name: String, var nationality: String, var age: Int) {}
