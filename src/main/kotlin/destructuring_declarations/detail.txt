@@ -1,0 +1,76 @@
+DESTRUCTURING DECLARATIONS IN KOTLIN
+Sometimes it’s easy to destructure an object into multiple variables of
+different properties instead of calling it again and again using .
+operator on the property or instance itself.
+It is beneficial for a few reasons like,
+
+1.We don’t have to use the dot property on the object again and again.
+2.If the object is of a nullable type, we can do the null check only once and then we can destructure it to non-nullable properties.
+3.The defined variable will be alive within the defined scope.
+4.Fewer chances of confusion and more readability.
+5.What is destructuring declaration?
+6.Let’s try to understand what is a destructuring declaration and how does it works internally.
+
+Usually, when we declare a property, we can initialise it with some value or mark it nullable.
+ If we want to extract a property from an object, we need to do that for each and every property, individually.
+
+Kotlin provides functionality to do that in a single declaration where
+we can destructure the object into multiple variables within a single declaration.
+
+How does it works internally?
+The compiler internally uses the componentN function of Kotlin to
+destructure the object and assign them to the properties individually.
+
+componentN is a functionality provided by Kotlin for any data class
+ which return the Nth property (in sequence from the beginning) of that data class.
+
+ Use cases of destructuring declaration
+ Destructuring declaration can be used anywhere but will try to list its common use cases where
+  it can be way more useful and the readability would be better.
+
+ 1. Normal Flow
+ Destructuring declaration can be used in any normal flow where an object’s properties need to be accessed multiple times.
+
+ var employee = Employee(name = "Suneet", age = 29, department = "Engineering")
+
+ var (name, age, department) = employee
+ println("$name at the age of $age is working in $department department")
+
+ 2. For-In loop
+ Destructuring declaration can also be used with for-in loops. Instead of declaring the item while iteration,
+  we can directly destructure them to variables and use them inside the loop.
+
+ val list = listOf(Employee(name = "Suneet", age = 29, department = "Engineering"),
+                      Employee(name = "John", age = 40, department = "Marketing"),
+                      Employee(name = "Agrawal", age = 35, department = "Sales"))
+
+     for ((name, age, department) in list){
+     	println("$name at the age of $age is working in $department department")
+     }
+
+ 3. Return from functions
+ Destructuring declaration is also helpful while returning multiple values from a function.
+ Instead of getting the result into a variable and that accessing its individual properties,
+ we can directly destructure it to individual properties.
+
+ fun getBestEmployee(): Employee {
+     //do some calculations
+     return Employee(name = "Suneet", age = 29, department = "Engineering")
+ }
+
+ val (name, age, department) = getBestEmployee()
+ println("The best Employee is $name")
+
+ Keep in mind we can use Pair or Triple also
+ but it’s better to have a named variable instead of Pair and Triple as that uses first,
+ second and third as variable names.
+
+ 4. In Maps
+ Destructuring declaration can further be used with maps where each entry can be destructured
+  into a key and a value where both can be used directly.
+
+ val map = mapOf(1 to "one", 2 to "two", 3 to "three")
+
+ for ((key, value) in map){
+         println("$key is pointing to $value")
+ }
