@@ -12,7 +12,7 @@ fun main(args: Array<String>) {
     var r3 = 5 downTo 1 step 2 // the range contains the number 5,3,1
     var r4 = 'a'..'z' // the range contains the values from a to z
 
-    var r7 = 'z'.downTo('a') step 2 // the range contain the values from z to a with step2
+    var r7 = 'z'.downTo('a') step 2 // the range contains the values from z to a with step2
 
     var isPresent = 'c' in r4 //check if c is present
 
