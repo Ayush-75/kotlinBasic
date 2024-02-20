@@ -26,7 +26,10 @@ open class Person { //Super Class
     protected val b = 2
     internal var c = 3
         //setter is visible only in Person class
-        private set
+        private set /*  this means -> This means that the value of bar can be modified only 
+        within the file where it is declared,
+         and it cannot be modified from other files or classes outside of the current file.*/
+         
     public var d = 4 // public by default
         private set
 }
