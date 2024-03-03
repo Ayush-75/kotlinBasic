@@ -21,6 +21,7 @@ fun main(args: Array<String>) {
     element at specific index you are "not" adding the element at specific index
     if you try to add element at list[5]="axe" it will throw error 
    Index 5 out of bounds for length 4 */
+   
     list[1] = "Ufc" 
 
     for (elements in list) {
