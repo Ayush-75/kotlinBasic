@@ -18,6 +18,7 @@ fun main(args: Array<String>) {
     }
 
     /**
+    _> ignore <_
      * Keep in mind that this approach works fine for small maps,
      * but if you have a large map, doing this operation repeatedly may not be efficient.
      * In such cases, you might consider creating a reverse map where values become keys
