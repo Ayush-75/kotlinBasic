@@ -17,7 +17,11 @@ fun main(args: Array<String>) {
 //    list.remove("Golu")
 //    list.add(1,"Axtentor")
 
-    list[1] = "Ufc"
+/*  by this way you are accessing the element at specific index or updating the 
+    element at specific index you are "not" adding the element at specific index
+    if you try to add element at list[5]="axe" it will throw error 
+   Index 5 out of bounds for length 4 */
+    list[1] = "Ufc" 
 
     for (elements in list) {
         println(elements)
