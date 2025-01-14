@@ -9,6 +9,8 @@ fun main(args: Array<String>) {
 
     val person = PersonWith()
     var bio:String = with(person) {
+        name = "Axe"
+        age = 25
         println(name)
         println(age)
         val ageAfter5year = age+5
@@ -17,6 +19,7 @@ fun main(args: Array<String>) {
 
     }
 
+    println(person.name)
     println(bio)
 }
 
