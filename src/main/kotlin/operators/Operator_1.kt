@@ -12,6 +12,10 @@ fun main() {
     val v2 = Vector(3, 4)
     val sum = v1 + v2 // This uses the overloaded + operator
     println(sum) // Output: Vector(x=4, y=6)
+
+    val counter = Counter(5)
+    counter+=5
+    println(counter.value)
 }
 /*
 * Avoid Modifying Internal State Directly:
@@ -20,3 +24,9 @@ Direct modifications can lead to unexpected side effects that are difficult to t
 Avoid Overloading Arbitrary or Confusing Operators:
 
 Don't overload operators if doing so doesn’t make logical sense for your class.*/
+
+class Counter(var value: Int){
+    operator fun plusAssign(increment: Int){
+        value+=increment
+    }
+}
