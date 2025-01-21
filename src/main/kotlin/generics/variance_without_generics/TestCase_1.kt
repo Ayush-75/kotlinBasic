@@ -85,3 +85,13 @@ fun main() {
 
 
 }
+
+class Tender<out T:Snack>(val product:T){
+    fun purchase(money: Coin):T = TODO()
+    // The refund function is not allowed because T is declared as out (covariant),
+    // meaning it can only be returned (produced) and not consumed.
+    // Uncommenting the following line would cause a compilation error.
+//    fun refund(snack:T): Coin = TODO()
+}
+
+
