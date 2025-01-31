@@ -1,0 +1,34 @@
+
+Why Delegation is Often Superior to Inheritance
+
+Flexibility and Extensibility:
+Inheritance: If you need to change or add behaviors, you may need to modify the parent class,
+ which can affect all child classes.
+Delegation: You can change the delegate object at runtime,
+allowing for more flexible and dynamic behavior changes without affecting the delegating class.
+Avoiding the Fragile Base Class Problem:
+
+Inheritance: Changes in the parent class can inadvertently break child classes.
+Delegation: Delegating classes are isolated from changes in the delegate classes, reducing the risk of unwanted side effects.
+Multiple Behaviors:
+
+Inheritance: Java, for instance, doesn't support multiple inheritance (a class can only extend one parent class).
+Delegation: A class can delegate behaviors to multiple delegate objects, effectively achieving multiple behavioral inheritances.
+Encapsulation:
+
+Inheritance: Inherits implementation details, exposing internal workings of the parent class.
+Delegation: Only exposes the behavior it delegates, keeping implementation details encapsulated within the delegate class.
+Easy Analogy
+Imagine you run a small bakery.
+
+Inheritance (Family Tradition):
+You inherit your bakery skills from your parents who were bakers. You learn all their recipes and methods.
+Pros: You immediately adopt their proven methods.
+Cons: If your parents change their recipes or methods, you must follow—even if you think there's a better way.
+
+Delegation (Hiring Experts):
+Instead of inheriting skills directly, you hire specialized bakers to handle specific tasks.
+ One is great at making bread, another excels at pastries.
+Pros: You can easily replace the bread baker if someone better comes along,
+or if you want to change the bread recipe without affecting pastry making.
+Cons: Initially, it might take some effort to manage multiple experts.

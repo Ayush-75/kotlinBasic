@@ -15,7 +15,7 @@ fun main(args: Array<String>) {
 
     println("Student $name age $age grade is $grade")
 
-    val (bestName,age2,dep) = bestEmployee()
+    val (bestName,_,dep) = bestEmployee()
     println("Best employee name is $bestName and department $dep")
 
     /**
@@ -31,9 +31,18 @@ fun main(args: Array<String>) {
 
     test3()
 
+    // Destructure the Pair into two variables
+    val (sum, difference) = computeSumAndDifference(10, 5)
+    println("Sum: $sum, Difference: $difference")
+
 }
 
 data class Employee(val name: String, val age: Int, val department: String)
+
+/**
+* How to Enable Destructuring in Normal Classes
+To make destructuring work for normal classes,
+* you must explicitly declare component1(), component2()*/
 
 class Student(val name: String,val age: Int,val grade:String) {
     operator fun component1(): String {
@@ -54,12 +63,24 @@ fun bestEmployee():Employee {
 
 data class Collage(val name:String,val department: String,val graduationYear:Int,val Cgpa:Float)
 
-//Variable name 'graduationYear' matches the name of a different component
-// if data class property changes often then be careful with naming and structuring
-// use in the case when property is fixed like coordinates longitude and latitude
+// Variable name 'graduationYear' matches the name of a different component
+// If data class property changes often then be careful with naming and structuring
+// Use in the case when property is fixed like coordinates longitude and latitude
+// Example: val (latitude, longitude) = Coordinates(12.34, 56.78)
+
+// Caution: If you change the number of properties in the data class 'Collage',
+// the destructuring declarations using this class will not automatically update.
+// You need to manually update all destructuring declarations to match the new structure
+
 fun test3(){
     val (name5, department, graduationYear) = Collage("Ayush" ,"IT",2019,7.0f)
     println("Collage name $name5")
     println("graduation year $department")
     println("Cgpa $graduationYear")
+}
+
+fun computeSumAndDifference(a: Int, b: Int): Pair<Int, Int> {
+    val sum = a + b
+    val difference = a - b
+    return Pair(sum, difference) // Return a Pair
 }
